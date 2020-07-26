@@ -1,0 +1,16 @@
+{
+  "name": "makeup-studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "scss": "node-sass --output-style compressed -o dist/styles src/styles",
+    "start": "browser-sync -s -f './index.html' 'dist/**/*' 'src/**/*'"
+  },
+  "author": "Ryszard Penkała",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.10",
+    "node-sass": "^4.14.1"
+  }
+}

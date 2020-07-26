@@ -1,0 +1,1 @@
+const rych = 'rych';

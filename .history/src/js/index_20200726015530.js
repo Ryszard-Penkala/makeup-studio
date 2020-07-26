@@ -1,0 +1,1 @@
+var rych = "rych"
