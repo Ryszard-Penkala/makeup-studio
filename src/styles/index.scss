@@ -10,39 +10,8 @@ body{
     background-color: green;
 }
 
-@mixin header-styling ($height: 100%, $width: 10%, $top:0px, $right:20px, $bottom:0px, $left:20px, $background-color: orange ) {
-    height: $height;
-    width: $width;
-    margin: $top $right $bottom $left;
-    background-color: $background-color;
-}
-
 .makeup-header{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    height: 10vh;
+    background-color: white;
     width: 100%;
-    background-color: red;
-    .makeup-header__logo{
-        @include header-styling;
-        .logo__container{
-            width: 100px;
-            height: 100px;
-            .logo__img{
-                width: 100px;
-                height: 100px;
-                object-fit: cover;
-            }
-        }
-    }
-    .makeup-header__navigation{
-        display: inline-block;
-        @include header-styling($width: auto, $background-color: hotpink);
-    }
-    .makeup-header__socials{
-        display: inline-block;
-        @include header-styling($background-color: rgb(210, 224, 9));
-    }
+    height: 10vh;
 }
