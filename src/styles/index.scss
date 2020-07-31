@@ -134,3 +134,35 @@ body{
         transform: translateY(0);
     }
 }
+
+.makeup-main{
+    width: 100%;
+    .main__pictures{
+        width: 100%;
+        height: 90vh;
+        background-color: yellowgreen;
+    }
+    .main__quotation{
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .quotation__text{
+            background-color: red;
+            display: inline-block;
+            width: 100%;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 1.5em;
+            font-size: 1.1em;
+        }
+        .quotation__sign{
+            display: block;
+            position: relative;
+            margin: 15px 10px;
+            left: 35%;
+        }
+    }
+}
