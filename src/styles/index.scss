@@ -205,11 +205,35 @@ body{
         width: 100%;
         height: auto;
         padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
         .contact__logo{
-            width: 100%;
+            display: block;
+            width: 50%;
             .logo__img{
                 width: 100%;
                 height: auto;
+            }
+        }
+        .contact__adress{
+            padding: 30px 0;
+            display: block;
+            .adress__title{
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+            .adress__adress{
+                line-height: 2rem;
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                font-size: 1.1rem;
             }
         }
 
