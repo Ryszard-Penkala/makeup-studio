@@ -149,12 +149,15 @@ body{
         justify-content: center;
         align-items: center;
         position: relative;
+        font-family: 'Courier Prime' , sans-serif;
         .quotation__text{
             background-color: red;
             display: inline-block;
             width: 100%;
             padding: 0 10px;
             text-align: center;
+            word-spacing: 1px;
+            letter-spacing: 1px;
             line-height: 1.5em;
             font-size: 1.1em;
         }
@@ -162,7 +165,7 @@ body{
             display: block;
             position: relative;
             margin: 15px 10px;
-            left: 35%;
+            left: 30%;
         }
     }
 }
