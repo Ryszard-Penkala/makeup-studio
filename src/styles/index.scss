@@ -36,6 +36,8 @@ body{
     align-items: center;
     justify-content: space-between;
     z-index: 999;
+    position: sticky;
+    top: 0;
     .makeup-header__logo{
         height: 100%;
         width: 30%;
@@ -119,7 +121,6 @@ body{
                 display: flex;
                 height: 25%;
                 width: 100%;
-                // background-color: blue;
                 color: var(--main-color-dark);
                 text-decoration: none;
                 font-size: 2em;
