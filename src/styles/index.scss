@@ -174,7 +174,7 @@ body{
         }
     }
     .main_portrait{
-        width: 100%;
+        width: auto;
         height: 100vh;
         background-color: turquoise;
         background-image: url('../../src/assets/2.JPG');
@@ -183,6 +183,11 @@ body{
         background-repeat: no-repeat;
         background-size: cover;
     }
+    // @media only screen and (max-device-width: 1366px) {
+    //     .main_portrait{
+    //       background-attachment: scroll;
+    //     }
+    // }
     .main__about-me{
         width: 100%;
         padding: 15px 20px;
