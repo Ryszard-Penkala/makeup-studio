@@ -32,3 +32,5 @@ dataLink.forEach((link) => {
 });
 
 initMap();
+
+console.log(map);
