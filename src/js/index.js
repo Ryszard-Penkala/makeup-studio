@@ -19,8 +19,6 @@ function initMap() {
   });
 }
 
-initMap();
-
 dataHamburger.addEventListener('click', () => {
   dataHamburger.classList.toggle('hamburger--active');
   dataLinks.classList.toggle('links--active');
@@ -32,3 +30,5 @@ dataLink.forEach((link) => {
     dataLinks.classList.toggle('links--active');
   });
 });
+
+initMap();
