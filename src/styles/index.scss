@@ -119,7 +119,6 @@ body{
             background-color: var(--main-color-light);
             a{
                 display: flex;
-                height: 25%;
                 width: 100%;
                 color: var(--main-color-dark);
                 text-decoration: none;
@@ -132,6 +131,11 @@ body{
                     border-color: var(--main-color-dark);
                     background-color: #c7c7c7;
                 }
+                .links__facebook,
+                .links__instagram{
+                    height: (100vh / 12);
+                }
+
             }
         }
     }
@@ -282,3 +286,5 @@ body{
         background-color: greenyellow;
     }
 }
+
+
