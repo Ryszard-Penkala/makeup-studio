@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/styles/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <title>Makeup-studio</title>
 </head>
 <body>
@@ -76,9 +77,18 @@
 
     </header>
     <main class="makeup-main">
-        <section class="main__pictures">
-
-        </section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
         <section class="main__quotation" id="quo">
             <span class="quotation__text">"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
             <span class="quotation__sign">Sophia Loren</span>
@@ -142,5 +152,25 @@
     <script src="src/js/index.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwNfO9QaTgtyqA0KYrMnwbgO5RAhewDFM&callback=initMap&libraries=&v=weekly"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper(document.querySelector('.swiper-container'), {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
+    </script>
 </body>
 </html>
