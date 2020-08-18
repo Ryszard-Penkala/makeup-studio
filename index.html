@@ -77,17 +77,17 @@
 
     </header>
     <main class="makeup-main">
-        <div class="swiper-container">
+        <div class="swiper-container" data-swiper_container >
             <div class="swiper-wrapper">
               <div class="swiper-slide">Slide 1</div>
               <div class="swiper-slide">Slide 2</div>
               <div class="swiper-slide">Slide 3</div>
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination" data-swiper_pagination ></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next" data-button_next ></div>
+            <div class="swiper-button-prev" data-button_prev></div>
         </div>
         <section class="main__quotation" id="quo">
             <span class="quotation__text">"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
@@ -170,7 +170,7 @@
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
             },
-        })
+        });
     </script>
 </body>
 </html>
