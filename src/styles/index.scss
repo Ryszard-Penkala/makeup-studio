@@ -1,6 +1,7 @@
 :root{
     --main-color-dark: #000;
     --main-color-light:#fff;
+    --link-color: #149dcc;
 }
 
 *,
@@ -169,6 +170,36 @@ body{
     @include hundred;
 
     position: relative;
+    .swiper-container {
+        width: 100%;
+        height: 90vh;
+        background-color: var(--main-color-light);
+
+      }
+
+    .swiper-slide {
+        @include hundred;
+
+
+        text-align: center;
+        font-size: 18px;
+        background: var(--main-color-light);
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+
     .main__pictures{
         width: 100%;
         height: 90vh;
@@ -287,7 +318,7 @@ body{
                 .contact__telephon-number{
                     display: inline-block;
                     width: 100%;
-                    color: blue;
+                    color: var(--link-color);
                 }
             }
         }
@@ -300,33 +331,4 @@ body{
         height: 50vh;
         background-color: var(--main-color-light);
     }
-}
-
-.swiper-container {
-    width: 100%;
-    height: 90vh;
-    background-color: var(--main-color-light);
-
-  }
-
-.swiper-slide {
-    @include hundred;
-
-
-    text-align: center;
-    font-size: 18px;
-    background: var(--main-color-light);
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
 }
