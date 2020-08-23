@@ -49,8 +49,7 @@ dataScrollTrigger.forEach((section) => {
     ease: 'easeInOut',
     scrollTrigger: {
       trigger: section,
-      start: 'top 20%',
-
+      start: 'top 50%',
     },
   });
 });

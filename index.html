@@ -88,9 +88,9 @@
             <div class="swiper-button-next" data-button_next ></div>
             <div class="swiper-button-prev" data-button_prev></div>
         </div>
-        <section class="main__quotation" id="quo">
-            <span class="quotation__text" data-scroll_trigger>"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
-            <span class="quotation__sign" data-scroll_trigger>Sophia Loren</span>
+        <section class="main__quotation" id="quo" data-scroll_trigger>
+            <span class="quotation__text">"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
+            <span class="quotation__sign">Sophia Loren</span>
         </section>
         <section class="main_portrait">
         </section>
@@ -98,21 +98,21 @@
             <div class="about-me__photo">
                 <img src="./src/assets/Me.JPG" class="about-me__img" alt="my photo">
             </div>
-            <div class="about-me__text">
-                <span class="text__part" data-scroll_trigger>Cześć, jestem Magda.
+            <div class="about-me__text" data-scroll_trigger>
+                <span class="text__part">Cześć, jestem Magda.
                 </span><br><br>
-                <span class="text__part" data-scroll_trigger>Od zawsze pasjonowałam się makijażem. Lubiłam malować siebie i inne kobiety.
+                <span class="text__part">Od zawsze pasjonowałam się makijażem. Lubiłam malować siebie i inne kobiety.
                     Przez wiele lat moja miłość do make'upu rosła w siłe i finalnie zaowocowała stworzeniem własnej marki "Magdalena Dykcik MAKE UP STUDIO".
                     Robienie makijażu jest moją życiową pasją, przy której się spełniam i która daje mi mnóstwo satysfakcji.
                 </span><br><br>
-                <span class="text__part" data-scroll_trigger>
+                <span class="text__part">
                     Chcę aby każda kobieta w moim studio czuła się piękna i pewna siebie.
                     Dlatego też pracuję wyłącznie na profesjonalnych markach makijażowych, które dają gwarancję długotrwałego efektu i są przyjazne dla skóry moich klientek.
                 </span><br><br>
-                <span class="text__part" data-scroll_trigger>
+                <span class="text__part">
                     Prowadzę studio makijażu w okolicy Poznania i Wrześni. Oferuję również usługę z dojazdem
                 </span><br><br>
-                <span class="text__sign" data-scroll_trigger>Do zobaczenia, Magda</span>
+                <span class="text__sign">Do zobaczenia, Magda</span>
             </div>
         </section>
         <section class="main__contact" id="contact">
@@ -144,7 +144,6 @@
 
 
 
-    <script type="module" src="./src/js/index.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwNfO9QaTgtyqA0KYrMnwbgO5RAhewDFM&callback=initMap&libraries=&v=weekly" defer></script>
     <script type="module" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
@@ -169,6 +168,7 @@
             },
         });
     </script>
+    <script type="module" src="./dist/bundle.js"></script>
 
 </body>
 </html>
