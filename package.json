@@ -20,9 +20,11 @@
     "eslint-plugin-import": "^2.22.0",
     "node-sass": "^4.14.1",
     "onchange": "^7.0.2",
-    "parallelshell": "^3.0.1"
+    "parallelshell": "^3.0.1",
+    "webpack": "^4.44.1"
   },
   "dependencies": {
+    "gsap": "^3.5.0",
     "swiper": "^6.1.1"
   }
 }

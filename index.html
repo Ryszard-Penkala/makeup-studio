@@ -89,8 +89,8 @@
             <div class="swiper-button-prev" data-button_prev></div>
         </div>
         <section class="main__quotation" id="quo">
-            <span class="quotation__text">"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
-            <span class="quotation__sign">Sophia Loren</span>
+            <span class="quotation__text" data-scroll_trigger>"Nic nie czyni kobiety piękniejszą,<br> niż jej wiara w to, że jest piękna."</span>
+            <span class="quotation__sign" data-scroll_trigger>Sophia Loren</span>
         </section>
         <section class="main_portrait">
         </section>
@@ -99,32 +99,32 @@
                 <img src="./src/assets/Me.JPG" class="about-me__img" alt="my photo">
             </div>
             <div class="about-me__text">
-                <span class="text__part">Cześć, jestem Magda.
+                <span class="text__part" data-scroll_trigger>Cześć, jestem Magda.
                 </span><br><br>
-                <span class="text__part">Od zawsze pasjonowałam się makijażem. Lubiłam malować siebie i inne kobiety.
+                <span class="text__part" data-scroll_trigger>Od zawsze pasjonowałam się makijażem. Lubiłam malować siebie i inne kobiety.
                     Przez wiele lat moja miłość do make'upu rosła w siłe i finalnie zaowocowała stworzeniem własnej marki "Magdalena Dykcik MAKE UP STUDIO".
                     Robienie makijażu jest moją życiową pasją, przy której się spełniam i która daje mi mnóstwo satysfakcji.
                 </span><br><br>
-                <span class="text__part">
+                <span class="text__part" data-scroll_trigger>
                     Chcę aby każda kobieta w moim studio czuła się piękna i pewna siebie.
                     Dlatego też pracuję wyłącznie na profesjonalnych markach makijażowych, które dają gwarancję długotrwałego efektu i są przyjazne dla skóry moich klientek.
                 </span><br><br>
-                <span class="text__part">
+                <span class="text__part" data-scroll_trigger>
                     Prowadzę studio makijażu w okolicy Poznania i Wrześni. Oferuję również usługę z dojazdem
                 </span><br><br>
-                <span class="text__sign">Do zobaczenia, Magda</span>
+                <span class="text__sign" data-scroll_trigger>Do zobaczenia, Magda</span>
             </div>
         </section>
         <section class="main__contact" id="contact">
-            <div class="contact__logo">
+            <div class="contact__logo" data-scroll_trigger>
                 <img src="./src/assets/logo.JPG" class="logo__img" alt="Makeup Studio logo">
             </div>
-            <div class="contact__adress">
+            <div class="contact__adress" data-scroll_trigger>
                 <span class="adress__title">Adres</span><br><br>
                 <span class="adress__adress">ul. Jarzębinowa 8 <br>
                 62-330 Nekielka</span>
             </div>
-            <div class="contact__contact">
+            <div class="contact__contact" data-scroll_trigger>
                 <span class="contact__title">Kontakt</span><br><br>
                 <span class="contact__email">Email: <span class="contact__email-adress">magdalenadykcikmakeup@gmail.com</span></span>
 
@@ -144,9 +144,11 @@
 
 
 
-    <script src="src/js/index.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwNfO9QaTgtyqA0KYrMnwbgO5RAhewDFM&callback=initMap&libraries=&v=weekly"></script>
+    <script type="module" src="./src/js/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwNfO9QaTgtyqA0KYrMnwbgO5RAhewDFM&callback=initMap&libraries=&v=weekly" defer></script>
+    <script type="module" src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!-- <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+    <script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.min.js"></script> -->
     <script type="module">
         import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js'
 
@@ -167,5 +169,6 @@
             },
         });
     </script>
+
 </body>
 </html>
