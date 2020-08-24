@@ -17,12 +17,12 @@ const dataMap = document.querySelector(UiSelectors.dataMap);
 
 let map;
 
-function initMap() {
+window.initMap = function () {
   map = new google.maps.Map(dataMap, {
     center: { lat: 52.3915729, lng: 17.3839114 },
     zoom: 10,
   });
-}
+};
 
 initMap();
 
