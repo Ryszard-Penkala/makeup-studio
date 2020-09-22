@@ -297,7 +297,7 @@ body{
                 width: 100%;
                 text-align: center;
                 font-weight: 700;
-                font-size: 1.3rem;
+                // font-size: 1.3rem;
             }
             .adress__adress,
             .contact__email,
@@ -306,7 +306,7 @@ body{
                 display: inline-block;
                 width: 100%;
                 text-align: center;
-                font-size: 1.1rem;
+                // font-size: 1.1rem;
             }
             .contact__email,
             .contact__telephon{
@@ -332,3 +332,51 @@ body{
         background-color: var(--main-color-light);
     }
 }
+
+@media screen and (max-width: 499px){
+    .adress__title,
+    .contact__title{
+        font-size: 1.3rem;
+    }
+    .quotation__text,
+    .quotation__sign
+    .about-me__text,
+    .adress__adress,
+    .contact__email,
+    .contact__telephon{
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (min-width: 500px){
+    .adress__title,
+    .contact__title{
+        font-size: 1.5rem;
+    }
+    .quotation__text,
+    .quotation__sign
+    .about-me__text,
+    .adress__adress,
+    .contact__email,
+    .contact__telephon{
+        font-size: 1.3rem;
+    }
+}
+@media screen and (min-width: 960px){
+    .adress__title,
+    .contact__title{
+        font-size: 2rem;
+    }
+    .quotation__text,
+    .quotation__sign
+    .about-me__text,
+    .adress__adress,
+    .contact__email,
+    .contact__telephon{
+        font-size: 1.5rem;
+    }
+    .makeup-main{
+        background-color: red;
+    }
+}
+
