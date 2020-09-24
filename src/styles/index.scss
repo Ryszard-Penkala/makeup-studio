@@ -82,7 +82,6 @@ body{
         .hamburger__box{
             display: inline-block;
             height: 30px;
-            width: 24px;
             position: relative;
             .hamburger__inside{
                 @include hamburger__line();
@@ -245,7 +244,7 @@ body{
     // }
     .main__about-me{
         width: 100%;
-        padding: 15px 20px;
+        padding: 30px;
         background-color: var(--main-color-dark);
         color: var(--main-color-light);
         .about-me__photo{
@@ -341,6 +340,9 @@ body{
         height: 10vh;
         padding: 0px 10px 0 10px;
     }
+    .hamburger__box{
+        width: 24px;
+    }
     .adress__title,
     .contact__title{
         font-size: 1.3rem;
@@ -367,6 +369,9 @@ body{
         height: 12vh;
         padding: 0px 30px 0 30px;
     }
+    .hamburger__box{
+        width: 34px;
+    }
     .adress__title,
     .contact__title{
         font-size: 1.6rem;
@@ -392,6 +397,9 @@ body{
     .makeup-header{
         height: 12vh;
         padding: 0px 30px 0 30px;
+    }
+    .hamburger__box{
+        width: 34px;
     }
     .adress__title,
     .contact__title{
