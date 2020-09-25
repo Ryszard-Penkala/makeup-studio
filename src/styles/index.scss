@@ -123,24 +123,24 @@ body{
 
         width: 100%;
         height: 50vh;
-        position: absolute;
         left: 0px;
         top: 10vh;
         transform: translateY(-60vh);
         transition: transform 0.6s .1s ease-in-out;
         .links__list{
             @include flex_centered;
-            justify-content: space-evenly;
 
-            width: 100%;
+            justify-content: space-evenly;
+            // width: 100%;
             flex-direction: column;
             text-decoration: none;
             list-style: none;
             background-color: var(--main-color-light);
+
             a{
                 @include flex_centered;
 
-                width: 100%;
+                // width: 100%;
                 color: var(--main-color-dark);
                 text-decoration: none;
                 font-size: 2em;
@@ -150,11 +150,6 @@ body{
                     border-color: var(--main-color-dark);
                     background-color: #c7c7c7;
                 }
-                .links__facebook,
-                .links__instagram{
-                    height: (100vh / 12);
-                }
-
             }
         }
     }
@@ -339,6 +334,19 @@ body{
     .makeup-header{
         height: 10vh;
         padding: 0px 10px 0 10px;
+        .makeup-header__links{
+            position: absolute;
+            .links__list{
+                width: 100%;
+                a{
+                    width: 100%;
+                }
+                .links__facebook,
+                .links__instagram{
+                    height: (100vh / 12);
+                }
+            }
+        }
     }
     .hamburger__box{
         width: 24px;
@@ -368,6 +376,19 @@ body{
     .makeup-header{
         height: 12vh;
         padding: 0px 30px 0 30px;
+        .makeup-header__links{
+            position: absolute;
+            .links__list{
+                width: 100%;
+                a{
+                    width: 100%;
+                }
+                .links__facebook,
+                .links__instagram{
+                    height: (100vh / 12);
+                }
+            }
+        }
     }
     .hamburger__box{
         width: 34px;
@@ -420,6 +441,8 @@ body{
         height: 12vh;
         padding: 0px 30px 0 30px;
         flex-direction: row;
+        margin: 0;
+        padding: 0;
         .makeup-header__hamburger{
             display: none;
         }
@@ -427,8 +450,18 @@ body{
             height: 100%;
             top: 0;
             transform: translateY(0);
+            position: relative;
             .links__list{
                 flex-direction: row;
+                width: auto;
+                font-size: 0.7rem;
+                a{
+                    width: auto;
+                }
+                .links__facebook,
+                .links__instagram{
+                    height: (100vh / 25);
+                }
             }
         }
     }
