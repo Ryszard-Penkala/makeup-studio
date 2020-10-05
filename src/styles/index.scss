@@ -452,15 +452,23 @@ body{
             transform: translateY(0);
             position: relative;
             .links__list{
+                display: flex;
                 flex-direction: row;
-                width: auto;
-                font-size: 0.7rem;
+                justify-content: flex-end;
+                margin: 25px;
+                padding: 25px;
+                font-size: 1.0rem;
                 a{
                     width: auto;
+                    margin: 35px;
+                    padding: 0;
                 }
                 .links__facebook,
                 .links__instagram{
-                    height: (100vh / 25);
+                    height: (100vh / 20);
+                    margin: 0;
+                    padding: 0;
+                    width: auto;
                 }
             }
         }
