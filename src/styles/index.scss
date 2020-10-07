@@ -509,6 +509,10 @@ body{
                     width: auto;
                     margin: 35px;
                     padding: 0;
+                    &:focus{
+                        background-color: var(--main-color-light);
+                        border-color: transparent;
+                    }
                 }
                 .links__facebook,
                 .links__instagram{
