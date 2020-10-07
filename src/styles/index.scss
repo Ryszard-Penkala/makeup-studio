@@ -561,6 +561,15 @@ body{
             grid-column: 2;
             align-self: center;
             justify-self: center;
+            .contact__socials{
+                justify-content: space-around;
+                .socials__facebook,
+                .socials__instagram{
+                    height: (100vh / 14);
+                    margin: 0;
+                    padding: 0;
+                }
+            }
         }
     }
 }
