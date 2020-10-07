@@ -264,19 +264,19 @@ body{
         }
     }
     .main__contact{
-        @include flex_centered;
-        @include height_auto;
+        // @include flex_centered;
+        // @include height_auto;
 
-        padding: 15px 20px;
-        flex-direction: column;
-        font-family: 'Roboto', sans-serif;
-        .contact__logo{
-            display: block;
-            width: 50%;
-            .logo__img{
-                @include height_auto;
-            }
-        }
+        // padding: 15px 20px;
+        // flex-direction: column;
+        // font-family: 'Roboto', sans-serif;
+        // .contact__logo{
+        //     display: block;
+        //     width: 50%;
+        //     .logo__img{
+        //         @include height_auto;
+        //     }
+        // }
         .contact__adress,
         .contact__contact{
             padding: 30px 0;
@@ -370,11 +370,26 @@ body{
     .contact__telephon{
         font-size: 1.1rem;
     }
-    .contact__socials{
+    .main__contact{
+        @include flex_centered;
+        @include height_auto;
+
+        padding: 15px 20px;
         flex-direction: column;
-        .socials__facebook,
-        .socials__instagram{
-            height: (100vh / 10);
+        font-family: 'Roboto', sans-serif;
+        .contact__logo{
+            display: block;
+            width: 50%;
+            .logo__img{
+                @include height_auto;
+            }
+        }
+        .contact__socials{
+            flex-direction: column;
+            .socials__facebook,
+            .socials__instagram{
+                height: (100vh / 10);
+            }
         }
     }
 }
@@ -419,12 +434,27 @@ body{
     .contact__telephon{
         font-size: 1.3rem;
     }
-    .contact__socials{
-        flex-direction: row;
-        padding: 30px 0px 15px 0px;
-        .socials__facebook,
-        .socials__instagram{
-            height: (100vh / 10);
+    .main__contact{
+        @include flex_centered;
+        @include height_auto;
+
+        padding: 15px 20px;
+        flex-direction: column;
+        font-family: 'Roboto', sans-serif;
+        .contact__logo{
+            display: block;
+            width: 50%;
+            .logo__img{
+                @include height_auto;
+            }
+        }
+        .contact__socials{
+            flex-direction: row;
+            padding: 30px 0px 15px 0px;
+            .socials__facebook,
+            .socials__instagram{
+                height: (100vh / 10);
+            }
         }
     }
 }
@@ -499,13 +529,34 @@ body{
             justify-content: center;
             align-items: center;
             .about-me__img{
-                height: 80%;
+                height: 70%;
                 width: auto;
                 display: block;
             }
         }
         .about-me__text{
             padding: 50px 45% 50px 50px;
+        }
+    }
+    .main__contact{
+        display: grid;
+        grid-template-columns: 40% 40% 20%;
+        align-content: center;
+        align-items: center;
+        row-gap: 20px;
+        margin: 30px 0;
+        .contact__logo{
+            grid-column: 1;
+            grid-row: 1 / 3;
+            align-self: center;
+            justify-self: end;
+            margin: auto 0;
+        }
+        .contact__adress,
+        .contact__contact{
+            grid-column: 2;
+            align-self: center;
+            justify-self: center;
         }
     }
 }
