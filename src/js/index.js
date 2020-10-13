@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Macy } from 'macy';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
@@ -16,6 +17,22 @@ const dataScrollTrigger = document.querySelectorAll(UiSelectors.dataScrollTrigge
 const dataMap = document.querySelector(UiSelectors.dataMap);
 
 let map;
+
+const macyInstance = Macy({
+  container: '.galleryContainer',
+  mobileFirst: true,
+  columns: 1,
+  breakAt: {
+    400: 2,
+    700: 3,
+    1100: 4,
+  },
+  margin: {
+    x: 10,
+    y: 30,
+
+  },
+});
 
 window.initMap = function () {
   map = new google.maps.Map(dataMap, {
