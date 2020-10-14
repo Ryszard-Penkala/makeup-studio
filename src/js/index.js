@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Macy } from 'macy';
+import macy from 'macy';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
@@ -18,8 +18,8 @@ const dataMap = document.querySelector(UiSelectors.dataMap);
 
 let map;
 
-const macyInstance = Macy({
-  container: '.galleryContainer',
+const macyInstance = new macy({
+  container: '.gallery-container',
   mobileFirst: true,
   columns: 1,
   breakAt: {
@@ -30,7 +30,6 @@ const macyInstance = Macy({
   margin: {
     x: 10,
     y: 30,
-
   },
 });
 

@@ -114,8 +114,8 @@ const dataMap = document.querySelector(UiSelectors.dataMap);
 
 let map;
 
-const macyInstance = Object(macy__WEBPACK_IMPORTED_MODULE_2__["Macy"])({
-  container: '.galleryContainer',
+const macyInstance = new macy__WEBPACK_IMPORTED_MODULE_2___default.a({
+  container: '.gallery-container',
   mobileFirst: true,
   columns: 1,
   breakAt: {
@@ -126,7 +126,6 @@ const macyInstance = Object(macy__WEBPACK_IMPORTED_MODULE_2__["Macy"])({
   margin: {
     x: 10,
     y: 30,
-
   },
 });
 
