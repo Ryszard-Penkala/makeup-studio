@@ -8,6 +8,7 @@ const UiSelectors = {
   dataLink: '[ data-link ]',
   dataMap: '[ data-map ]',
   dataScrollTrigger: '[ data-scroll_trigger ]',
+  dataImage: '[data-image]',
 };
 
 const dataHamburger = document.querySelector(UiSelectors.dataHamburger);
@@ -15,8 +16,13 @@ const dataLinks = document.querySelector(UiSelectors.dataLinks);
 const dataLink = document.querySelectorAll(UiSelectors.dataLink);
 const dataScrollTrigger = document.querySelectorAll(UiSelectors.dataScrollTrigger);
 const dataMap = document.querySelector(UiSelectors.dataMap);
+const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 
 let map;
+
+const lightbox = document.createElement('div');
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
 
 const macyInstance = new macy({
   container: '.gallery-container',
@@ -31,6 +37,23 @@ const macyInstance = new macy({
     x: 10,
     y: 30,
   },
+});
+
+dataImage.forEach((image) => {
+  image.addEventListener('click', (e) => {
+    lightbox.classList.add('active');
+    const img = document.createElement('img');
+    img.src = image.src;
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild);
+    }
+    lightbox.appendChild(img);
+  });
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove('active');
 });
 
 window.initMap = function () {
