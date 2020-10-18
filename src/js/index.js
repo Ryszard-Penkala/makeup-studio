@@ -1,6 +1,5 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import macy from 'macy';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
@@ -21,54 +20,6 @@ const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 let map;
 
 const lightbox = document.createElement('div');
-lightbox.id = 'lightbox';
-document.body.appendChild(lightbox);
-
-const macyInstance = new macy({
-  container: '.gallery-container',
-  mobileFirst: true,
-  columns: 1,
-  breakAt: {
-    400: 2,
-    700: 3,
-    1100: 4,
-  },
-  margin: {
-    x: 10,
-    y: 30,
-  },
-});
-
-dataImage.forEach((image) => {
-  image.addEventListener('click', (e) => {
-    lightbox.classList.add('active');
-    const img = document.createElement('img');
-    img.src = image.src;
-    while (lightbox.firstChild) {
-      lightbox.removeChild(lightbox.firstChild);
-    }
-    lightbox.appendChild(img);
-  });
-});
-
-lightbox.addEventListener('click', (e) => {
-  if (e.target !== e.currentTarget) return;
-  lightbox.classList.remove('active');
-});
-
-window.initMap = function () {
-  map = new google.maps.Map(dataMap, {
-    center: { lat: 52.3915729, lng: 17.3839114 },
-    zoom: 10,
-  });
-};
-
-initMap();
-
-dataHamburger.addEventListener('click', () => {
-  dataHamburger.classList.toggle('hamburger--active');
-  dataLinks.classList.toggle('links--active');
-});
 
 dataLink.forEach((link) => {
   link.addEventListener('click', () => {
@@ -92,3 +43,46 @@ dataScrollTrigger.forEach((section) => {
     },
   });
 });
+
+// window.initMap = function () {
+//   map = new google.maps.Map(dataMap, {
+//     center: { lat: 52.3915729, lng: 17.3839114 },
+//     zoom: 10,
+//   });
+// };
+
+window.initMap = () => {
+  map = new google.maps.Map(dataMap, {
+    center: { lat: 52.3915729, lng: 17.3839114 },
+    zoom: 10,
+  });
+};
+
+// initMap();
+
+dataHamburger.addEventListener('click', () => {
+  dataHamburger.classList.toggle('hamburger--active');
+  dataLinks.classList.toggle('links--active');
+});
+
+lightbox.id = 'lightbox';
+document.body.appendChild(lightbox);
+
+dataImage.forEach((image) => {
+  image.addEventListener('click', () => {
+    lightbox.classList.add('active');
+    const img = document.createElement('img');
+    img.src = image.src;
+    while (lightbox.firstChild) {
+      lightbox.removeChild(lightbox.firstChild);
+    }
+    lightbox.appendChild(img);
+  });
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target !== e.currentTarget) return;
+  lightbox.classList.remove('active');
+});
+
+const masonry = require('./gallery.js');
