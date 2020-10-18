@@ -1,5 +1,6 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { google } from 'google-maps';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',

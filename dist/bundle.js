@@ -94,6 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
+// import { google } from 'google-maps';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
