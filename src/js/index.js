@@ -9,6 +9,7 @@ const UiSelectors = {
   dataMap: '[ data-map ]',
   dataScrollTrigger: '[ data-scroll_trigger ]',
   dataImage: '[data-image]',
+  dataLightbox: '[data-lightbox]',
 };
 
 const dataHamburger = document.querySelector(UiSelectors.dataHamburger);
@@ -20,7 +21,8 @@ const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 
 let map;
 
-const lightbox = document.createElement('div');
+// const lightbox = document.createElement('div');
+const lightbox = document.querySelector(UiSelectors.dataLightbox);
 
 dataLink.forEach((link) => {
   link.addEventListener('click', () => {
@@ -66,8 +68,8 @@ dataHamburger.addEventListener('click', () => {
   dataLinks.classList.toggle('links--active');
 });
 
-lightbox.id = 'lightbox';
-document.body.appendChild(lightbox);
+// lightbox.id = 'lightbox';
+// document.body.appendChild(lightbox);
 
 dataImage.forEach((image) => {
   image.addEventListener('click', () => {
@@ -78,6 +80,10 @@ dataImage.forEach((image) => {
       lightbox.removeChild(lightbox.firstChild);
     }
     lightbox.appendChild(img);
+    // adding new features
+    const button = document.createElement('button');
+    lightbox.appendChild(button);
+    lightbox.lastChild.classList.add('close');
   });
 });
 
