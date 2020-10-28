@@ -84,6 +84,7 @@ dataImage.forEach((image) => {
     const button = document.createElement('button');
     lightbox.appendChild(button);
     lightbox.lastChild.classList.add('close');
+    // finish of new features
   });
 });
 
