@@ -84,13 +84,17 @@ dataImage.forEach((image) => {
     const button = document.createElement('button');
     lightbox.appendChild(button);
     lightbox.lastChild.classList.add('close');
+    button.addEventListener('click', (e) => {
+      if (e.target !== e.currentTarget) return;
+      lightbox.classList.remove('active');
+    });
     // finish of new features
   });
 });
 
-lightbox.addEventListener('click', (e) => {
-  if (e.target !== e.currentTarget) return;
-  lightbox.classList.remove('active');
-});
+// lightbox.addEventListener('click', (e) => {
+//   if (e.target !== e.currentTarget) return;
+//   lightbox.classList.remove('active');
+// });
 
 const masonry = require('./gallery.js');
