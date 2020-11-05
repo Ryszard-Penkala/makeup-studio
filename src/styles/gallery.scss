@@ -43,25 +43,28 @@
 }
 
 
-.close {
+.close,
+.next,
+.prev {
     position: absolute;
-    right: 32px;
-    top: 32px;
-    width: 32px;
-    height: 32px;
     cursor: pointer;
     z-index: 10000;
     border: 1px solid white;
     background-color: rgba(0, 0, 0, 0)
-  }
-  .close:hover {
+}
+.close{
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  &:hover {
     opacity: 1;
     background-color: #000;
     -webkit-box-shadow: 0px 0px 20px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
     -moz-box-shadow:    0px 0px 20px 6px #ccc;  /* Firefox 3.5 - 3.6 */
     box-shadow:         0px 0px 20px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
   }
-  .close:before, .close:after {
+  &:before, &:after {
     position: absolute;
     left: 14px;
     content: ' ';
@@ -72,12 +75,39 @@
     margin: 0;
     padding: 0;
   }
-  .close:before {
+  &:before {
     transform: rotate(45deg);
   }
-  .close:after {
+  &:after {
     transform: rotate(-45deg);
   }
+}
+
+.next{
+  right: 32px;
+  width: 64px;
+  height: 64px;
+  background-image: url("/angle-right-solid.svg"), none;
+  background-color: blue;
+  background-size: 64px 64px;
+}
+
+.prev{
+  left: 32px;
+  width: 64px;
+  height: 64px;
+  background: url('/angle-left-solid.svg');
+  background-size: 64px 64px;
+}
+
+.next:hover,
+.prev:hover{
+  opacity: 1;
+  background-color: #000;
+  -webkit-box-shadow: 0px 0px 20px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  -moz-box-shadow:    0px 0px 20px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+  box-shadow:         0px 0px 20px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
 
 @media screen and (min-width: 1367px){
     .close:before, .close:after {

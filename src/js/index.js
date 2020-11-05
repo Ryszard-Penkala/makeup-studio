@@ -75,6 +75,8 @@ dataImage.forEach((image) => {
   image.addEventListener('click', () => {
     lightbox.classList.add('active');
     const img = document.createElement('img');
+    const next = document.createElement('button');
+    const prev = document.createElement('button');
     img.src = image.src;
     while (lightbox.firstChild) {
       lightbox.removeChild(lightbox.firstChild);
@@ -84,6 +86,10 @@ dataImage.forEach((image) => {
     const button = document.createElement('button');
     lightbox.appendChild(button);
     lightbox.lastChild.classList.add('close');
+    lightbox.appendChild(next);
+    lightbox.lastChild.classList.add('next');
+    lightbox.appendChild(prev);
+    lightbox.lastChild.classList.add('prev');
     button.addEventListener('click', (e) => {
       if (e.target !== e.currentTarget) return;
       lightbox.classList.remove('active');
