@@ -98,14 +98,14 @@ dataImage.forEach((image, index) => {
     });
     next.addEventListener('click', () => {
       imgIndex = (imgIndex += 1) % dataImage.length;
-      img.src = dataImage[imgIndex];
+      img.src = dataImage[imgIndex].src;
     });
     prev.addEventListener('click', () => {
       imgIndex = (imgIndex -= 1);
       if (imgIndex < 0) {
         imgIndex = dataImage.length - 1;
       }
-      img.src = dataImage[imgIndex];
+      img.src = dataImage[imgIndex].src;
     });
     // finish of new features
   });
