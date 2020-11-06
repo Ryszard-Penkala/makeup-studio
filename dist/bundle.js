@@ -165,12 +165,14 @@ dataHamburger.addEventListener('click', () => {
 // lightbox.id = 'lightbox';
 // document.body.appendChild(lightbox);
 
-dataImage.forEach((image) => {
+dataImage.forEach((image, index) => {
   image.addEventListener('click', () => {
     lightbox.classList.add('active');
     const img = document.createElement('img');
     const next = document.createElement('button');
     const prev = document.createElement('button');
+    let imgIndex = index;
+    console.log(imgIndex);
     img.src = image.src;
     while (lightbox.firstChild) {
       lightbox.removeChild(lightbox.firstChild);
@@ -187,6 +189,17 @@ dataImage.forEach((image) => {
     button.addEventListener('click', (e) => {
       if (e.target !== e.currentTarget) return;
       lightbox.classList.remove('active');
+    });
+    next.addEventListener('click', () => {
+      imgIndex = (imgIndex += 1) % dataImage.length;
+      img.src = dataImage[imgIndex];
+    });
+    prev.addEventListener('click', () => {
+      imgIndex = (imgIndex -= 1);
+      if (imgIndex < 0) {
+        imgIndex = dataImage.length - 1;
+      }
+      img.src = dataImage[imgIndex];
     });
     // finish of new features
   });

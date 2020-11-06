@@ -83,21 +83,21 @@
   }
 }
 
-.next{
-  right: 32px;
+.next,
+.prev{
   width: 64px;
   height: 64px;
+  background-size: 100% 100%;
+}
+
+.next{
+  right: 64px;
   background-image: url("/angle-right-solid.svg"), none;
-  background-color: blue;
-  background-size: 64px 64px;
 }
 
 .prev{
-  left: 32px;
-  width: 64px;
-  height: 64px;
-  background: url('/angle-left-solid.svg');
-  background-size: 64px 64px;
+  left: 64px;
+  background-image: url('/angle-left-solid.svg'), none;
 }
 
 .next:hover,
@@ -108,6 +108,8 @@
   -moz-box-shadow:    0px 0px 20px 6px #ccc;  /* Firefox 3.5 - 3.6 */
   box-shadow:         0px 0px 20px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
+
+
 
 @media screen and (min-width: 1367px){
     .close:before, .close:after {
