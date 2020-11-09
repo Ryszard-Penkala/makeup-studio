@@ -78,7 +78,6 @@ dataImage.forEach((image, index) => {
     const next = document.createElement('button');
     const prev = document.createElement('button');
     let imgIndex = index;
-    console.log(imgIndex);
     img.src = image.src;
     while (lightbox.firstChild) {
       lightbox.removeChild(lightbox.firstChild);
@@ -101,7 +100,7 @@ dataImage.forEach((image, index) => {
       img.src = dataImage[imgIndex].src;
     });
     prev.addEventListener('click', () => {
-      imgIndex = (imgIndex -= 1);
+      imgIndex -= 1;
       if (imgIndex < 0) {
         imgIndex = dataImage.length - 1;
       }
