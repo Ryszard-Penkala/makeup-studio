@@ -529,7 +529,12 @@ body{
     }
     .main__about-me{
         display: grid;
+        position: relative;
         grid-template-columns: 50% 50%;
+        .about-me-link{
+            position: absolute;
+            top: -10vh;
+        }
         .about-me__photo{
             height: 100%;
             display: flex;
