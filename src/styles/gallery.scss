@@ -57,6 +57,7 @@
   top: 32px;
   width: 32px;
   height: 32px;
+  z-index: 99999;
   &:hover {
     opacity: 1;
     background-color: #000;
@@ -109,10 +110,54 @@
   box-shadow:         0px 0px 20px 6px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
 }
 
+@media screen and (max-width: 1023px){
+  .close{
+    height: 32px;
+    width: 32px;
+    right: 10vw;
+    top: 4vw;
+    &:before, &:after{
+      content: '';
+      height: 33px;
+      left: 14px;
+    }
+  }
+}
 
-
-@media screen and (min-width: 1367px){
+@media screen and (min-width: 1368px){
     .close:before, .close:after {
         left: 13px;
     }
 }
+
+@media screen and (max-width: 1366px){
+  .next,
+  .prev{
+    background-image: none;
+    border: none;
+    height: 100%;
+    width: 7vw;
+  }
+  .next{
+    right: 0px;
+  }
+  .prev{
+    left: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1367px){
+  .close{
+    height: 64px;
+    width: 64px;
+    right: 10vw;
+    top: 4vw;
+    &:before, &:after{
+      content: '';
+      height: 65px;
+      left: 30px;
+    }
+  }
+}
+
+
