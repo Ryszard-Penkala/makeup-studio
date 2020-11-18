@@ -50,7 +50,8 @@
     cursor: pointer;
     z-index: 10000;
     border: 1px solid white;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
 }
 .close{
   right: 32px;
@@ -133,10 +134,11 @@
 @media screen and (max-width: 1366px){
   .next,
   .prev{
-    background-image: none;
     border: none;
     height: 100%;
     width: 7vw;
+    background-color: #000;
+    opacity: 0.3;
   }
   .next{
     right: 0px;
@@ -145,6 +147,8 @@
     left: 0px;
   }
 }
+
+
 
 @media screen and (min-width: 1024px) and (max-width: 1367px){
   .close{
