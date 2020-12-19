@@ -229,7 +229,7 @@ body{
         width: auto;
         height: 100vh;
         background-color: var(--main-color-light);
-        background-image: url('../../src/assets/paralax.JPG');
+        // background-image: url('../../src/assets/paralax_small.JPG');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
@@ -359,6 +359,11 @@ body{
             }
         }
     }
+    .makeup-main{
+        .main_portrait{
+            background-image: url('../../src/assets/paralax_small.JPG');
+        }
+    }
     .about-me-link{
         top: -10vh;
     }
@@ -432,6 +437,13 @@ body{
     .hamburger__box{
         width: 34px;
     }
+
+    .makeup-main{
+        .main_portrait{
+            background-image: url('../../src/assets/paralax_small.JPG');
+        }
+    }
+
     .about-me-link{
         top: -12vh;
     }
@@ -506,6 +518,14 @@ body{
     .contact__email,
     .contact__telephon{
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 1077px){
+    .makeup-main{
+        .main_portrait{
+            background-image: url('../../src/assets/paralax.JPG');
+        }
     }
 }
 
