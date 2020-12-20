@@ -134,7 +134,6 @@ body{
             @include flex_centered;
 
             justify-content: space-evenly;
-            // width: 100%;
             flex-direction: column;
             text-decoration: none;
             list-style: none;
@@ -143,7 +142,6 @@ body{
             a{
                 @include flex_centered;
 
-                // width: 100%;
                 color: var(--main-color-dark);
                 text-decoration: none;
                 font-size: 2em;
@@ -178,7 +176,6 @@ body{
         text-align: center;
         font-size: 18px;
         background: var(--main-color-light);
-        /* Center slide text vertically */
         display: -webkit-box;
         display: -ms-flexbox;
         display: -webkit-flex;
@@ -193,7 +190,6 @@ body{
         align-items: center;
         img{
             width: 100%;
-            // width: auto;
         }
     }
 
@@ -232,30 +228,22 @@ body{
         width: auto;
         height: 100vh;
         background-color: var(--main-color-light);
-        // background-image: url('../../src/assets/paralax_small.JPG');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
-    // @media only screen and (max-device-width: 1366px) {
-    //     .main_portrait{
-    //       background-attachment: scroll;
-    //     }
-    // }
+    @media only screen and (max-device-width: 1366px) {
+        .main_portrait{
+          background-attachment: scroll;
+        }
+    }
     .main__about-me{
         width: 100%;
         padding: 30px;
         background-color: var(--main-color-dark);
         color: var(--main-color-light);
         position: relative;
-        // .about-me__photo{
-        //     @include height_auto;
-        //     .about-me__img{
-        //         @include height_auto;
-        //         display: inline-block;
-        //     }
-        // }
         .about-me-link{
             position: absolute;
         }
@@ -274,19 +262,6 @@ body{
         }
     }
     .main__contact{
-        // @include flex_centered;
-        // @include height_auto;
-
-        // padding: 15px 20px;
-        // flex-direction: column;
-        // font-family: 'Roboto', sans-serif;
-        // .contact__logo{
-        //     display: block;
-        //     width: 50%;
-        //     .logo__img{
-        //         @include height_auto;
-        //     }
-        // }
         position: relative;
         .contact__link{
             position: absolute;
