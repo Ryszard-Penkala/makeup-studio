@@ -175,7 +175,6 @@ body{
     .swiper-slide {
         @include hundred;
 
-
         text-align: center;
         font-size: 18px;
         background: var(--main-color-light);
@@ -193,35 +192,9 @@ body{
         -webkit-align-items: center;
         align-items: center;
         img{
-            width: auto;
-            height: 100vh;
+            width: 100%;
+            // width: auto;
         }
-    }
-    .slide_1{
-        //background-image: url('../../src/assets/Slide_1.JPG');
-        width: 100vw;
-        background-color: var(--main-color-light);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-
-    }
-    .slide_2{
-        //background-image: url('../../src/assets/Slide_2.JPG');
-        width: 100%;
-        height: auto;
-        background-color: var(--main-color-light);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .slide_3{
-        //background-image: url('../../src/assets/Slide_3.JPG');
-        height: auto;
-        background-color: var(--main-color-light);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
 
@@ -555,6 +528,12 @@ body{
     .makeup-main{
         .main_portrait{
             background-image: url('../../src/assets/paralax.JPG');
+        }
+        .swiper-slide {
+            img{
+                height: 100%;
+                width: auto;
+            }
         }
     }
 }
