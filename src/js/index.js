@@ -1,6 +1,5 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-// import { google } from 'google-maps';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
@@ -21,7 +20,6 @@ const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 
 let map;
 
-// const lightbox = document.createElement('div');
 const lightbox = document.querySelector(UiSelectors.dataLightbox);
 
 dataLink.forEach((link) => {
@@ -47,13 +45,6 @@ dataScrollTrigger.forEach((section) => {
   });
 });
 
-// window.initMap = function () {
-//   map = new google.maps.Map(dataMap, {
-//     center: { lat: 52.3915729, lng: 17.3839114 },
-//     zoom: 10,
-//   });
-// };
-
 window.initMap = () => {
   map = new google.maps.Map(dataMap, {
     center: { lat: 52.3915729, lng: 17.3839114 },
@@ -61,15 +52,10 @@ window.initMap = () => {
   });
 };
 
-// initMap();
-
 dataHamburger.addEventListener('click', () => {
   dataHamburger.classList.toggle('hamburger--active');
   dataLinks.classList.toggle('links--active');
 });
-
-// lightbox.id = 'lightbox';
-// document.body.appendChild(lightbox);
 
 dataImage.forEach((image, index) => {
   image.addEventListener('click', () => {
@@ -109,10 +95,5 @@ dataImage.forEach((image, index) => {
     // finish of new features
   });
 });
-
-// lightbox.addEventListener('click', (e) => {
-//   if (e.target !== e.currentTarget) return;
-//   lightbox.classList.remove('active');
-// });
 
 const masonry = require('./gallery.js');
