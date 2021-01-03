@@ -6,4 +6,5 @@ Site created for makeup studio with following technologies:
 - Webpack
 - NPM scripts
 - eslint
-You can visit on: https://distracted-thompson-df2c27.netlify.app/
+
+You can visit on: http://www.magdalenadykcik.pl/
