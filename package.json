@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "google-maps": "^4.3.3",
-    "gsap": "^3.5.0",
+    "gsap": "^3.6.0",
     "macy": "^2.5.1",
     "swiper": "^6.1.1"
   }
