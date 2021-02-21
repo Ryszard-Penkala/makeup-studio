@@ -94,7 +94,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
 
 
-// import { google } from 'google-maps';
 
 const UiSelectors = {
   dataHamburger: '[ data-hamburger ]',
@@ -113,9 +112,8 @@ const dataScrollTrigger = document.querySelectorAll(UiSelectors.dataScrollTrigge
 const dataMap = document.querySelector(UiSelectors.dataMap);
 const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 
-let map;
+let mapNekielka;
 
-// const lightbox = document.createElement('div');
 const lightbox = document.querySelector(UiSelectors.dataLightbox);
 
 dataLink.forEach((link) => {
@@ -141,29 +139,22 @@ dataScrollTrigger.forEach((section) => {
   });
 });
 
-// window.initMap = function () {
-//   map = new google.maps.Map(dataMap, {
-//     center: { lat: 52.3915729, lng: 17.3839114 },
-//     zoom: 10,
-//   });
-// };
-
 window.initMap = () => {
-  map = new google.maps.Map(dataMap, {
+  const nekielka = { lat: 52.381527, lng: 17.388579 };
+  mapNekielka = new google.maps.Map(dataMap, {
     center: { lat: 52.3915729, lng: 17.3839114 },
     zoom: 10,
   });
+  const markerNekielka = new google.maps.Marker({
+    position: nekielka,
+    map: mapNekielka,
+  });
 };
-
-// initMap();
 
 dataHamburger.addEventListener('click', () => {
   dataHamburger.classList.toggle('hamburger--active');
   dataLinks.classList.toggle('links--active');
 });
-
-// lightbox.id = 'lightbox';
-// document.body.appendChild(lightbox);
 
 dataImage.forEach((image, index) => {
   image.addEventListener('click', () => {
@@ -203,11 +194,6 @@ dataImage.forEach((image, index) => {
     // finish of new features
   });
 });
-
-// lightbox.addEventListener('click', (e) => {
-//   if (e.target !== e.currentTarget) return;
-//   lightbox.classList.remove('active');
-// });
 
 const masonry = __webpack_require__(5);
 

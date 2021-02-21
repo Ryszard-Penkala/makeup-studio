@@ -18,7 +18,7 @@ const dataScrollTrigger = document.querySelectorAll(UiSelectors.dataScrollTrigge
 const dataMap = document.querySelector(UiSelectors.dataMap);
 const dataImage = document.querySelectorAll(UiSelectors.dataImage);
 
-let map;
+let mapNekielka;
 
 const lightbox = document.querySelector(UiSelectors.dataLightbox);
 
@@ -46,9 +46,14 @@ dataScrollTrigger.forEach((section) => {
 });
 
 window.initMap = () => {
-  map = new google.maps.Map(dataMap, {
+  const nekielka = { lat: 52.381527, lng: 17.388579 };
+  mapNekielka = new google.maps.Map(dataMap, {
     center: { lat: 52.3915729, lng: 17.3839114 },
     zoom: 10,
+  });
+  const markerNekielka = new google.maps.Marker({
+    position: nekielka,
+    map: mapNekielka,
   });
 };
 
