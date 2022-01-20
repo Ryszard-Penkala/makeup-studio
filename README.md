@@ -7,4 +7,4 @@ Site created for makeup studio with following technologies:
 - NPM scripts
 - eslint
 
-You can visit on: http://www.magdalenadykcik.pl/
+You can visit on: https://makeup-studio.netlify.app/
